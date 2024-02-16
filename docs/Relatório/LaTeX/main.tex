@@ -1,0 +1,50 @@
+\documentclass[11pt]{report}
+\usepackage[a4paper, width=6in, height=9.2in]{geometry}
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{acro}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{color}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{todonotes}
+\usepackage{minted}
+
+\usemintedstyle{autumn}
+
+\setstretch{1.3}
+\renewcommand{\arraystretch}{1.3}
+
+% Ajustar o espaçamento antes de capítulos, indíce, etc.
+\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-16pt}{30pt}
+
+
+\begin{document}
+
+% Capa
+\include{Conteúdo/capa}
+
+% Índice
+\pagenumbering{roman}
+\tableofcontents
+
+% Capítulos e subcapítulos
+\newpage
+\pagenumbering{arabic}
+\include{Conteúdo/introdução}
+\include{Conteúdo/metodologia}
+\include{Conteúdo/competição}
+\include{Conteúdo/grupo}
+\include{Conteúdo/conclusão}
+
+\end{document}
